@@ -5,8 +5,8 @@
     <title>Spring Security Example </title>
 </head>
 <body>
-<div th:style="'background:url(' + @{</style.css>} + ');'"></div>
-Registration
+<div th:style=" @{</style.css>}"></div>
+Request
 <!--/*@thymesVar id="param" type="am"*/-->
 <div th:if="${param.error}">
     Invalid username and password.
@@ -16,7 +16,7 @@ Registration
 </div>
 <form th:action="@{/request}" method="post">
     <div>
-         <label> Type(sell/buy) :
+         <label> Type :
             <select>
                 <option th:each="requestType : ${T(am.rate.project.bestexchangerate.dom.RequestType).values()}"
                         th:value="${requestType}"
@@ -35,9 +35,16 @@ Registration
             </select>
         </label>
     </div>
-    <div><label> Currency : <input type="text" name="name"/> </label></div>
-    <div><label> Value : <input type="text" name="name"/> </label></div>
-    <div><label> Deadline : <input type="date" name="deadline" /> </label></div>
+    <div>
+        <label> Currency : <input type="text" name="Currency"/>
+            <!--<select >-->
+                <!--<option th:each="currency : ${(am.rate.project.bestexchangerate.dom.Currency).findAll()}"-->
+                        <!--th:value="${currency}"/>-->
+            <!--</select>-->
+        </label>
+    </div>
+    <div><label> Value : <input type="number" name="value" min="0" step="0.01"/> </label></div>
+    <div><label> Deadline : <input type="date" name="deadline" th:min="${deadline}" /> </label></div>
     <div><input type="submit" value="Checkout"/></div>
 </form>
 </body>

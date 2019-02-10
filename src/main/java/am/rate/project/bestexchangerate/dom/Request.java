@@ -26,7 +26,7 @@ public class Request {
     private boolean active;
     @Column(nullable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date deadline;
+    private Date deadline = new Date();
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_client")
     private Client client;
