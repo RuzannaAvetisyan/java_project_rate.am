@@ -1,19 +1,22 @@
 package am.rate.project.bestexchangerate.dom;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 //@Table(uniqueConstraints = { @UniqueConstraint(columnNames = {"request_type","exchange_options", "fk_currency", "active", "fk_client"}) })
 public class Request {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(nullable = false, name = "request_type")
     @Enumerated(value = EnumType.STRING)
     private RequestType requestType;
     @Enumerated(value = EnumType.STRING)
     @Column(name = "Exchange_options")
-    private ExchangeOptions exchangeOptions = ExchangeOptions.CASH;
+    private ExchangeOption exchangeOption = ExchangeOption.CASH;
     @ManyToOne
     @JoinColumn(name = "fk_currency")
     private Currency currency;
@@ -22,6 +25,7 @@ public class Request {
     @Column(name = "active")
     private boolean active;
     @Column(nullable = false)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date deadline;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_client")
@@ -84,5 +88,13 @@ public class Request {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public ExchangeOption getExchangeOption() {
+        return exchangeOption;
+    }
+
+    public void setExchangeOption(ExchangeOption exchangeOption) {
+        this.exchangeOption = exchangeOption;
     }
 }

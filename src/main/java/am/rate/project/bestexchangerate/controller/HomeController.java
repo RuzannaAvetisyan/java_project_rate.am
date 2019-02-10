@@ -14,6 +14,11 @@ public class HomeController {
         model.addAttribute("name", name);
         return "home";
     }
+    @GetMapping("/request")
+    public String request(@RequestParam(defaultValue="World") String name, Model model) {
+
+        return "request";
+    }
 
 
 }

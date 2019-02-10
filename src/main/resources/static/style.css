@@ -1,0 +1,15 @@
+body {
+    margin: 50px auto;
+}
+form {
+    max-width: 500px;
+    margin: 0 auto 25px auto;
+    display: block;
+}
+label {
+    font-weight: 700;
+}
+#location {
+    margin-top: 45px;
+    position: relative;
+}
