@@ -13,7 +13,7 @@ import java.util.Collection;
 public class Client implements UserDetails {
     @Id
     @Email(regexp = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$")
-    private String email;
+    private String username;
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
@@ -24,34 +24,10 @@ public class Client implements UserDetails {
     public Client() {
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public String getUsername() {
-        return email;
     }
 
     @Override
@@ -74,6 +50,28 @@ public class Client implements UserDetails {
         return isActive();
     }
 
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -85,5 +83,4 @@ public class Client implements UserDetails {
     public void setActive(boolean active) {
         this.active = active;
     }
-
 }

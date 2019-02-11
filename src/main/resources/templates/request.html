@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<!--<link href="/style.css" th:href="@{/style.css}" rel="stylesheet" />-->
+
 <head>
     <title>Spring Security Example </title>
 </head>
-<body>
-<div th:style=" @{</style.css>}"></div>
+<link rel="stylesheet" th:src="@{/static/style.css}" >
+
+<body >
+<div ></div>
 Request
 <!--/*@thymesVar id="param" type="am"*/-->
 <div th:if="${param.error}">
@@ -14,18 +18,35 @@ Request
 <div th:if="${param.logout}">
     You have been logged out.
 </div>
-<form th:action="@{/request}" method="post">
+
+<!--<form th:object="${request}" method="post">-->
+<!--<div>-->
+    <!--<label>-->
+        <!--<select th:field="*{currency}">-->
+            <!--<option value=""> &#45;&#45; </option>-->
+            <!--<option th:each="${(am.rate.project.bestexchangerate.dom.Currency).findAll()}">-->
+
+            <!--</option>-->
+        <!--</select>-->
+    <!--</label>-->
+<!--</div>-->
+
+<!--</form>-->
+<form  th:action="@{/request}" method="post">
+    <link rel="stylesheet" th:src="@{/static/style.css}" >
     <div>
          <label> Type :
-            <select>
+            <select th:field="*{{requestType}}">
                 <option th:each="requestType : ${T(am.rate.project.bestexchangerate.dom.RequestType).values()}"
                         th:value="${requestType}"
-                        th:text="${requestType}">
+                        th:selected="${requestType==T(am.rate.project.bestexchangerate.dom.RequestType)}"
+                        th:text="${requestType}"
+                        >
                 </option>
             </select>
         </label>
     </div>
-    <div>
+    <div >
         <label> Option :
             <select>
                 <option th:each="exchangeOption : ${T(am.rate.project.bestexchangerate.dom.ExchangeOption).values()}"
@@ -36,14 +57,16 @@ Request
         </label>
     </div>
     <div>
-        <label> Currency : <input type="text" name="Currency"/>
-            <!--<select >-->
-                <!--<option th:each="currency : ${(am.rate.project.bestexchangerate.dom.Currency).findAll()}"-->
-                        <!--th:value="${currency}"/>-->
-            <!--</select>-->
+        <label> Currency :
+            <select>
+                <option th:each="currencyType : ${T(am.rate.project.bestexchangerate.dom.CurrencyType).values()}"
+                        th:value="${currencyType}"
+                        th:text="${currencyType}">
+                </option>
+            </select>
         </label>
     </div>
-    <div><label> Value : <input type="number" name="value" min="0" step="0.01"/> </label></div>
+    <div ><label> Value : <input type="number" name="value" min="0" step="0.01"/> </label></div>
     <div><label> Deadline : <input type="date" name="deadline" th:min="${deadline}" /> </label></div>
     <div><input type="submit" value="Checkout"/></div>
 </form>

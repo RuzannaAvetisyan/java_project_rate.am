@@ -14,6 +14,6 @@ public class ClientService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        return clientRepo.findByEmail(s);
+        return (UserDetails) clientRepo.findByUsername(s);
     }
 }

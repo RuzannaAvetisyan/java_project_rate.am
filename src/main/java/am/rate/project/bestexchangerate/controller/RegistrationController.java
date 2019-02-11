@@ -20,7 +20,7 @@ public class RegistrationController {
 
     @PostMapping("/registration")
     public String addClient(Client client, Model model){
-        Client clientFDB = clientRepo.findByEmail(client.getEmail());
+        Client clientFDB = clientRepo.findByUsername(client.getUsername());
         if(clientFDB != null){
             model.addAttribute("message", "User exists!");
             return "registration";
