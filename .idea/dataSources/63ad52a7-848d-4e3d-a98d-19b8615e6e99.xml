@@ -981,7 +981,7 @@
     <table id="247" parent="2" name="request">
       <Engine>MyISAM</Engine>
     </table>
-    <column id="248" parent="243" name="email">
+    <column id="248" parent="243" name="username">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1007,7 +1007,7 @@
     </column>
     <key id="252" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>email</ColNames>
+      <ColNames>username</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="253" parent="244" name="client_email">
@@ -1062,35 +1062,35 @@
       <DataType>bit(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="247" name="deadline">
+    <column id="263" parent="247" name="currency_type">
       <Position>3</Position>
-      <DataType>date|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="264" parent="247" name="exchange_options">
-      <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="247" name="request_type">
+    <column id="264" parent="247" name="deadline">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="247" name="exchange_options">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="247" name="request_type">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="247" name="value">
-      <Position>6</Position>
+    <column id="267" parent="247" name="value">
+      <Position>7</Position>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="247" name="fk_client">
-      <Position>7</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="268" parent="247" name="fk_currency">
+    <column id="268" parent="247" name="fk_client">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -1099,11 +1099,7 @@
       <ColNames>fk_client</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="270" parent="247" name="FKa3luc8r3ev08q3r474alcnhjl">
-      <ColNames>fk_currency</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="271" parent="247" name="PRIMARY">
+    <key id="270" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

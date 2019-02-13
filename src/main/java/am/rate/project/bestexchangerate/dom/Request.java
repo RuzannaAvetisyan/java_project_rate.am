@@ -28,11 +28,11 @@ public class Request implements Service {
     @Column(nullable = false)
     private Float value = 0.0F;
     @Column(name = "active")
-    private boolean active;
+    private boolean active = true;
     @Column(nullable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date deadline = new Date();
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name = "fk_client")
     private Client client;
 
@@ -105,6 +105,13 @@ public class Request implements Service {
 
     public void setExchangeOption(ExchangeOption exchangeOption) {
         this.exchangeOption = exchangeOption;
+    }
+    public CurrencyType getCurrencyType() {
+        return currencyType;
+    }
+
+    public void setCurrencyType(CurrencyType currencyType) {
+        this.currencyType = currencyType;
     }
 
     @Override

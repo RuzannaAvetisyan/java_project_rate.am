@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 @Controller
 public class RegistrationController {
@@ -27,6 +28,6 @@ public class RegistrationController {
         }
         client.setActive(true);
         clientRepo.save(client);
-        return "redirect:/login";
+        return "redirect:/home";
     }
 }
