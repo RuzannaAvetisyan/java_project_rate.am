@@ -20,10 +20,8 @@ public class Client implements UserDetails {
     private String password;
     private boolean active;
 
-
     public Client() {
     }
-
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -83,4 +81,5 @@ public class Client implements UserDetails {
     public void setActive(boolean active) {
         this.active = active;
     }
+
 }

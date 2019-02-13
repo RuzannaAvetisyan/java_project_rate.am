@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Profile page</title>
+</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">
+    var bt;
+    var check = function() {
+        if (document.getElementById('password').value ===
+            document.getElementById('confirm_password').value) {
+            bt = document.getElementById('btSubmit');
+            bt.disabled = false;
+            document.getElementById('message').style.color = 'green';
+            document.getElementById('message').innerHTML = 'matching';
+        } else {
+            bt = document.getElementById('btSubmit');
+            bt.disabled = true;
+            document.getElementById('message').style.color = 'red';
+            document.getElementById('message').innerHTML = 'not matching';
+        }
+    }
+</script>
+<body>
+Profile
+<!--/*@thymesVar id="param" type="am"*/-->
+<form th:action="@{/editProfile}" method="post">
+    </br>
+    <div>
+        <label> Password :
+            <input name="password" id="password" type="password" onkeyup='check();' />
+        </label>
+    </div>
+    </br>
+    <div>
+        <label> Confirm password:
+            <input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' />
+            <span id='message'></span>
+        </label>
+    </div>
+    </br>
+    <div>
+        <label>
+            <input type="submit" value="Save" id="btSubmit" disabled/>
+        </label>
+    </div>
+</form>
+</body>
+</html>
