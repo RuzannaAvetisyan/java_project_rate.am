@@ -14,8 +14,4 @@ public class Currency {
     public String getCurrencyType() {
         return currencyType;
     }
-
-    public void setCurrencyType(String currencyType) {
-        this.currencyType = currencyType;
-    }
 }

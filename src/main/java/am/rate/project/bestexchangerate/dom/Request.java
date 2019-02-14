@@ -1,30 +1,25 @@
 package am.rate.project.bestexchangerate.dom;
 
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
-import java.lang.annotation.Annotation;
 import java.util.Date;
 
 @Entity
 //@Table(uniqueConstraints = { @UniqueConstraint(columnNames = {"request_type","exchange_options", "fk_currency", "active", "fk_client"}) })
-public class Request implements Service {
+public class Request {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(nullable = false, name = "request_type")
     @Enumerated(value = EnumType.STRING)
-    private RequestType requestType;
+    private RequestType requestType = RequestType.SELL;
     @Enumerated(value = EnumType.STRING)
     @Column(name = "exchange_options")
     private ExchangeOption exchangeOption = ExchangeOption.CASH;
-    @Enumerated(value = EnumType.STRING)
-    @Column(name = "currency_type")
-    private CurrencyType currencyType;
-//    @ManyToOne
-//    @JoinColumn(name = "fk_currency")
-//    private Currency currency;
+    @ManyToOne()
+    @JoinColumn(name = "fk_currency")
+    private Currency currency;
     @Column(nullable = false)
     private Float value = 0.0F;
     @Column(name = "active")
@@ -36,12 +31,10 @@ public class Request implements Service {
     @JoinColumn(name = "fk_client")
     private Client client;
 
-    public Request(RequestType requestType, ExchangeOption exchangeOption,
-                   CurrencyType currencyType, Float value,
-                   boolean active, Date deadline, Client client) {
+    public Request(RequestType requestType, ExchangeOption exchangeOption, Currency currency, Float value, boolean active, Date deadline, Client client) {
         this.requestType = requestType;
         this.exchangeOption = exchangeOption;
-        this.currencyType = currencyType;
+        this.currency = currency;
         this.value = value;
         this.active = active;
         this.deadline = deadline;
@@ -106,21 +99,12 @@ public class Request implements Service {
     public void setExchangeOption(ExchangeOption exchangeOption) {
         this.exchangeOption = exchangeOption;
     }
-    public CurrencyType getCurrencyType() {
-        return currencyType;
+
+    public Currency getCurrency() {
+        return currency;
     }
 
-    public void setCurrencyType(CurrencyType currencyType) {
-        this.currencyType = currencyType;
-    }
-
-    @Override
-    public String value() {
-        return null;
-    }
-
-    @Override
-    public Class<? extends Annotation> annotationType() {
-        return null;
+    public void setCurrency(Currency currency) {
+        this.currency = currency;
     }
 }

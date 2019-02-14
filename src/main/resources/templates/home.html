@@ -5,12 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<!--<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>-->
 <form th:action="@{/logout}" method="post">
     <input type="submit" value="Sign Out"/>
 </form>
-<!--/*@thymesVar id="name" type="am"*/-->
-<p th:text="'Hello, ' + ${name} + '!'" />
+<p th:text="'Hello, ' + ${name} + '!'"></p>
 <p><a href="/login">Login</a></p>
 <p><a href="/registration">Registration</a></p>
 <p><a href="/request">Request</a></p>

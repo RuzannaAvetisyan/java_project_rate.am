@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" xmlns:form="http://www.w3.org/1999/html">
-<!--<link href="/style.css" th:href="@{/style.css}" rel="stylesheet" />-->
-
 <head >
-    <title>Spring Security Example </title>
+    <title>Request </title>
     <meta http-equiv="Content-Type" content="charset=UTF-8" />
 </head>
 <link rel="stylesheet" th:src="@{/static/style.css}" >
@@ -12,49 +10,21 @@
 <body >
 <div ></div>
 Request
-<!--/*@thymesVar id="param" type="am"*/-->
-<!--/*@thymesVar id="error" type="java"*/-->
 <div th:if="${param.error}">
     Invalid username and password.
 </div>
 <div th:if="${param.logout}">
     You have been logged out.
 </div>
-<form action="/request/list" method="get">
-    <form:select  list="list">
-        <form:options items="${list}" itemLabel="list"/>
-    </form:select>
-</form>
-<!--/*@thymesVar id="request" type="java"*/-->
 <form action="#"  th:action="@{/request}"  th:object="${request}" method="post">
     <link rel="stylesheet" th:src="@{/static/style.css}" >
-    <!--<div>-->
-        <!--<label th:for="requestType"> Type :-->
-            <!--&lt;!&ndash;/*@thymesVar id="requestType" type="java"*/&ndash;&gt;-->
-            <!--<select th:field="*{{requestType}}">-->
-                <!--<option th:each="requestType : ${T(am.rate.project.bestexchangerate.dom.RequestType).values()}"-->
-                        <!--th:text="${requestType.name}"-->
-                        <!--th:value="${requestType}">-->
-                <!--</option>-->
-            <!--</select>-->
-        <!--</label>-->
-    <!--</div>-->
+
     <div >
         <label> Type : </br>
-            <input type="radio" name="requestType" value="SELL" checked> Sell</input>
-            <input type="radio" name="requestType" value="BUY"> Buy</input>
+            <input type="radio" name="requestType" value="SELL" checked/>
+            <input type="radio" name="requestType" value="BUY"/>
         </label>
     </div>
-    <!--<div>-->
-        <!--<label> Option :-->
-            <!--<select>-->
-                <!--<option th:each="exchangeOption : ${T(am.rate.project.bestexchangerate.dom.ExchangeOption).values()}"-->
-                        <!--th:value="${exchangeOption}"-->
-                        <!--th:text="${exchangeOption}">-->
-                <!--</option>-->
-            <!--</select>-->
-        <!--</label>-->
-    <!--</div>-->
     <div >
         <label> Exchange Option :</br>
             <input type="radio" name="exchangeOption" value="CASH" checked> Cash</input></br>
@@ -62,29 +32,20 @@ Request
             <input type="radio" name="exchangeOption" value="CARD"> Card</input></br>
         </label>
     </div>
-    <!--<div>-->
-        <!--<label> Currency :-->
-            <!--<select>-->
-                <!--<option th:each="currencyType : ${T(am.rate.project.bestexchangerate.dom.CurrencyType).values()}"-->
-                        <!--th:value="${currencyType}"-->
-                        <!--th:text="${currencyType}">-->
-                    <!--<input type="text" name="currencyType" value="${currencyType}"/>-->
-                <!--</option>-->
-            <!--</select>-->
-        <!--</label>-->
-    <!--</div>-->
     <div>
-        <label> Currency :
-            <select name="currencyType">
-                <option value="USD" selected>USD</option>
-                <option value="EUR">EUR</option>
-                <option value="RUR">RUR</option>
-                <option value="GBP">GBP</option>
+        <label th:for="currency" > Currency :
+            <select th:field="*{{currency}}"  name="currency">
+                <option th:each="currency : ${currencies}"
+                        th:text="${currency.currencyType}"
+                        th:value="${currency.currencyType}"
+                        th:selected="${currency}"
+                >
+                </option>
             </select>
         </label>
     </div></br>
-    <div ><label> Value : <input type="number" name="value" min="0" step="0.01"/> </label></div></br>
-    <div><label> Deadline : <input type="date" name="deadline" th:min="${deadline}" /> </label></div></br>
+    <div ><label> Value : <input type="number" name="value" min="0" step="0.01" value="0.00"/> </label></div></br>
+    <div><label> Deadline : <input type="date" name="deadline" th:min="${min}" th:value="${nextWeek}"/> </label></div></br>
     <div><input type="submit" value="Checkout"/></div>
 </form>
 </body>
