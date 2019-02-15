@@ -5,22 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da5a4e22-3565-487a-849e-c8b4a99fea67" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/63ad52a7-848d-4e3d-a98d-19b8615e6e99.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/63ad52a7-848d-4e3d-a98d-19b8615e6e99.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/CurrencyTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/ParserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/SchedulerNotificationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/CurrencyType.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/RequestType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/RequestType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/ClientRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/ClientRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/CurrencyRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/CurrencyRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editProfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/RequestRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/RequestRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/MailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/MailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/request.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/dom/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/dom/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/dom/Currency.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/dom/Currency.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/dom/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/dom/Request.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/dom/RequestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/dom/RequestType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/repo/ClientRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/am/rate/project/bestexchangerate/repo/ClientRepo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -89,7 +99,100 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/controller/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/request.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/SchedulerNotificationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="91" column="31" lean-forward="true" selection-start-line="91" selection-start-column="31" selection-end-line="91" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/ParserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-504">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+                <element signature="e#899#900#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/CurrencyTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/RequestRepo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/ExchangeOption.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Request.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="563">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -106,7 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/ЕequestЕype.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/RxchangeOptions.java" />
@@ -115,31 +217,35 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/resources/static/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/currency.php" />
-        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/RequestRepo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/ClientRepo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templateResolver.xml" />
         <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/ClientService.java" />
         <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/ExchangeOption.java" />
         <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/CurrencyType.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/configuration/MailConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/MailSender.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/checkEmail.html" />
         <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/configuration/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/controller/RegistrationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/CurrencyRepo.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Request.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Currency.java" />
         <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/RequestType.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/editProfile.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/registration.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/request.html" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/ClientRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/CurrencyTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Currency.java" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/MailSender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/CurrencyRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/ParserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/RequestRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Request.java" />
+        <option value="$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/SchedulerNotificationService.java" />
       </list>
     </option>
   </component>
@@ -162,9 +268,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="42" />
-    <option name="y" value="12" />
-    <option name="width" value="703" />
+    <option name="x" value="703" />
+    <option name="width" value="671" />
     <option name="height" value="688" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -283,8 +388,10 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550160135250" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550270660932" />
     <property name="database.console.LAST_STATE" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -311,7 +418,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="ParserService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="am.rate.project.bestexchangerate.service.ParserService" />
+      <module name="best-exchange-rate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="am.rate.project.bestexchangerate.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="best-exchange-rate" />
       <extension name="coverage">
@@ -328,6 +448,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="Application.ParserService" />
       </list>
     </recent_temporary>
   </component>
@@ -354,12 +475,13 @@
       <workItem from="1550082159044" duration="15935000" />
       <workItem from="1550134733280" duration="166000" />
       <workItem from="1550134911462" duration="26000" />
-      <workItem from="1550134951114" duration="24946000" />
+      <workItem from="1550134951114" duration="28408000" />
+      <workItem from="1550216048068" duration="44703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190215000" />
+    <option name="totallyTimeSpent" value="238380000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -373,7 +495,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21104388" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21406959" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -385,16 +507,16 @@
       <window_info anchor="bottom" id="Database Console" order="1" sideWeight="0.49924356" weight="0.8608838" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.049099836" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.6824877" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.4969743" visible="true" weight="0.1309329" />
+      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.4969743" weight="0.049099836" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5030257" side_tool="true" weight="0.59738135" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.61374795" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3289689" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="15" sideWeight="0.49924356" weight="0.7774141" />
       <window_info anchor="bottom" id="Version Control" order="16" weight="0.3289689" />
@@ -410,6 +532,44 @@
       <window_info anchor="right" id="Maven" order="8" weight="0.32980332" />
       <window_info anchor="right" id="Database" order="9" weight="0.19591528" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21406959" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Console" order="1" sideWeight="0.49924356" weight="0.8608838" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.6824877" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.4969743" weight="0.16202946" />
+      <window_info anchor="bottom" id="TODO" order="8" weight="0.3289689" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5030257" side_tool="true" weight="0.59738135" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3289689" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Changes" order="15" sideWeight="0.49924356" weight="0.7774141" />
+      <window_info anchor="bottom" id="Version Control" order="16" weight="0.3289689" />
+      <window_info anchor="bottom" id="SQL Generator" order="17" sideWeight="0.49848714" weight="0.7397709" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Bean Validation" order="6" weight="0.32980332" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.24962178" />
+      <window_info anchor="right" id="Maven" order="8" weight="0.32980332" />
+      <window_info active="true" anchor="right" id="Database" order="9" visible="true" weight="0.19591528" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -462,41 +622,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.2.Final/hibernate-jpa-2.1-api-1.0.2.Final.jar!/javax/persistence/Column.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.2.Final/hibernate-jpa-2.1-api-1.0.2.Final.jar!/javax/persistence/JoinColumn.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.2.Final/hibernate-jpa-2.1-api-1.0.2.Final.jar!/javax/persistence/ManyToOne.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/63ad52a7-848d-4e3d-a98d-19b8615e6e99/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.2.17.Final/hibernate-core-5.2.17.Final.jar!/org/hibernate/cfg/annotations/MapKeyColumnDelegator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding>
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://63ad52a7-848d-4e3d-a98d-19b8615e6e99/schema/best_exchange_rate/table/request/index/FKr17t6wdk6nhex68y7h26xtok3">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -559,30 +684,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templateResolver.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.8.RELEASE/spring-security-core-5.0.8.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/ClientService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -610,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/configuration/MvcConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -627,27 +725,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/configuration/MailConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/checkEmail.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/MailSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.0.8.RELEASE/spring-security-config-5.0.8.RELEASE.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-264">
@@ -686,40 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/RequestRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/ClientRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://63ad52a7-848d-4e3d-a98d-19b8615e6e99/schema/best_exchange_rate/table/currency">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://63ad52a7-848d-4e3d-a98d-19b8615e6e99/schema/best_exchange_rate/table/client">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -727,91 +771,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://63ad52a7-848d-4e3d-a98d-19b8615e6e99/schema/best_exchange_rate/table/request">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/controller/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="51" column="16" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/CurrencyRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="856">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Client#0;class#Client#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/CurrencyType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Currency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Currency#0;class#Currency#0" />
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/ExchangeOption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/CurrencyType.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/RequestType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -847,17 +807,218 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/request.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/ClientRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22.jar!/lombok/Data.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/controller/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="51" column="16" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/MailSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Currency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/configuration/MailConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/CurrencyRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/ClientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/repo/RequestRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/request.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://63ad52a7-848d-4e3d-a98d-19b8615e6e99/schema/best_exchange_rate/table/request">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://63ad52a7-848d-4e3d-a98d-19b8615e6e99/schema/best_exchange_rate/table/currency">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/CurrencyTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/ExchangeOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/dom/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/ParserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/am/rate/project/bestexchangerate/service/SchedulerNotificationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="91" column="31" lean-forward="true" selection-start-line="91" selection-start-column="31" selection-end-line="91" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

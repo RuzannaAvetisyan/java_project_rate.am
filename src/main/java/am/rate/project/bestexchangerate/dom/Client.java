@@ -1,5 +1,8 @@
 package am.rate.project.bestexchangerate.dom;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -9,19 +12,21 @@ import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import java.util.Collection;
 
+@Data
+@NoArgsConstructor
 @Entity
 public class Client implements UserDetails {
     @Id
     @Email(regexp = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$")
     private String username;
+
     @Column(nullable = false)
     private String name;
+
     @Column(nullable = false)
     private String password;
-    private boolean active;
 
-    public Client() {
-    }
+    private boolean active;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -47,39 +52,4 @@ public class Client implements UserDetails {
     public boolean isEnabled() {
         return isActive();
     }
-
-    @Override
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
 }

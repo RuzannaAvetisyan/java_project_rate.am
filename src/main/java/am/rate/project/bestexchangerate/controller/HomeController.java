@@ -46,9 +46,9 @@ public class HomeController {
         model.addAttribute("exchangeOptions", ExchangeOption.values());
         model.addAttribute("currencies", currencyRepo.findAll());
         model.addAttribute("min",
-                DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH).format(today));
+                DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.UK).format(today));
         model.addAttribute("nextWeek",
-                DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH)
+                DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.UK)
                         .format(today.plus(1, ChronoUnit.WEEKS)));
 
         return "request";
@@ -63,8 +63,8 @@ public class HomeController {
         request.setClient(client);
         request.setCurrency(currencyRepo.findByCurrencyType(currency));
         requestRepo.save(request);
-        model.setViewName("successful");
 
         return "redirect:/home";
     }
+
 }
