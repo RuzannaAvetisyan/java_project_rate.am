@@ -1,21 +1,128 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+>
 <head>
-    <title>Spring Security Example </title>
+    <title>Login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<div th:if="${param.error}">
-    Invalid username and password.
+<div class="dropdownmenu">
+    <nav >
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/request">Make a request</a></li>
+            <li><a href="/registration">Registration</a></li>
+            <li><a href="/editProfile">Edit profile</a></li>
+            <li style="float:right" ><a href="/logout">Logout</a></li>
+            <li style="float:right" ><a href="/login">Login</a></li>
+        </ul>
+    </nav>
 </div>
-<div th:if="${param.logout}">
-    You have been logged out.
+<div class="login">
+    <div th:if="${param.error}">
+        Invalid username and password.
+    </div>
+    <div th:if="${param.logout}">
+        You have been logged out.
+    </div>
+    <form th:action="@{/login}" method="post">
+        <div><label><h4>Email :</h4> <input type="email" name="username"/> </label></div>
+        <div><label><h4>Password :</h4> <input type="password" name="password"/> </label></div></br></br>
+        <div><input type="submit" value="Sign In"/></div>
+    </form>
 </div>
-<form th:action="@{/login}" method="post">
-    <div><label> Email : <input type="email" name="username"/> </label></div></br>
-    <div><label> Password: <input type="password" name="password"/> </label></div></br>
-    <div><input type="submit" value="Sign In"/></div>
-</form>
-<p><a href="/registration">Registration</a></p>
+
 </body>
+<style for="dropdownmenu">
+    .dropdownmenu ul, .dropdownmenu li {
+        margin: 3px;
+        padding: 0;
+    }
+    .dropdownmenu ul {
+        background: gray;
+        list-style: none;
+        width: 100%;
+    }
+    .dropdownmenu li {
+        float: left;
+        position: relative;
+
+    }
+    .dropdownmenu a {
+        background: #b4b4b4;
+        color: #FFFFFF;
+        display: block;
+        font: bold 12px/20px sans-serif;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-transition: all .25s ease;
+        -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+        -o-transition: all .25s ease;
+        transition: all .25s ease;
+
+    }
+    .dropdownmenu li:hover a {
+        background: #383838;
+    }
+</style>
+<style>
+    @import url(https://image.freepik.com/free-photo/black-white-bamboo-surface-merge-background_7182-2053.jpg);
+
+    * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+
+    html { width: 100%; height:100%; overflow:hidden; }
+
+    body {
+
+        background-image:
+                url(https://roklen24.cz/img/54be16c7e4b0ceea49c64f51/1920/1080?_sig=Tv8kWe9xBr6Xh5iHMKlb7nUFzWHmXcZxeTNhjbsENQg);
+        background-repeat: repeat-x;
+        background-position: 0 100%;
+        background-size: cover;
+        }
+    .login {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        margin: -150px 0 0 -150px;
+        width:300px;
+        height:300px;
+    }
+    .login h1 { color: #cccccc; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+    h4 {
+        color: #c9c9c9;
+        font-size: 15px;
+        font-weight: 600;
+        font-style:normal;
+        font-family: "Roboto", helvetica, arial, sans-serif;
+        text-shadow: -3px 1px 1px rgba(0, 0, 0, 0.98);
+        text-transform:uppercase;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+        background: rgba(0, 0, 0, 0.3);
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 13px;
+        color: #b4b4b4;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+
+        border-radius: 4px;
+        box-shadow: inset 0 -5px 45px rgba(198, 198, 198, 0.2), 0 1px 1px rgba(231, 231, 231, 0.51);
+        -webkit-transition: box-shadow .5s ease;
+        -moz-transition: box-shadow .5s ease;
+        -o-transition: box-shadow .5s ease;
+        -ms-transition: box-shadow .5s ease;
+        transition: box-shadow .5s ease;
+    }
+    input:focus { box-shadow: inset 0 -5px 45px rgba(180, 180, 180, 0.4), 0 1px 1px rgba(189, 192, 187, 0.7); }
+
+</style>
+
 </html>

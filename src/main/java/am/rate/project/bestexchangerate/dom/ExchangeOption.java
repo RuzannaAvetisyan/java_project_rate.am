@@ -3,7 +3,8 @@ package am.rate.project.bestexchangerate.dom;
 public enum ExchangeOption {
     CASH("Cash"),
     NON_CASH("Non cash"),
-    CARD("Card");
+    CARD("Card"),
+    IGNORE_OPTION("Ignore option");
 
     private final String name;
 

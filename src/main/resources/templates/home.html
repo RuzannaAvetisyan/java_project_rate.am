@@ -1,17 +1,236 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Home</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+<div class="dropdownmenu">
+    <nav >
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/request">Make a request</a></li>
+            <li><a href="/registration">Registration</a></li>
+            <li><a href="/editProfile">Edit profile</a></li>
+            <li style="float:right" ><a href="/logout">Logout</a></li>
+            <li style="float:right" ><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+</div>
 <body>
-<form th:action="@{/logout}" method="post">
-    <input type="submit" value="Sign Out"/>
-</form>
-<p th:text="'Hello, ' + ${name} + '!'"></p>
-<p><a href="/login">Login</a></p>
-<p><a href="/registration">Registration</a></p>
-<p><a href="/request">Request</a></p>
-<p><a href="/editProfile">Edit profile</a></p>
+<div class="table-title">
+    </br>
+    </br>
+    <h3>The table with the average value of the currency, with a difference from yesterday's and with a growth rate for 10 days</h3>
+</div>
+<div>
+    <table class="table-fill">
+        <tr>
+            <th class="text-left">Currency</th>
+            <th class="text-left">Buy</th>
+            <th class="text-left">Difference</th>
+            <th class="text-left">Growth rate</th>
+            <th class="text-left">Sell</th>
+            <th class="text-left">Difference</th>
+            <th class="text-left">Growth rate</th>
+        </tr>
+        <tr th:each="mapEntry : ${table.getCurrencyStatistics()}">
+            <td th:text="${mapEntry.getKey().getCurrencyType()}"></td>
+            <td th:text="${mapEntry.getValue().getBuy()}"></td>
+            <td th:text="${mapEntry.getValue().getDifferenceBuy()}"></td>
+            <td th:text="${mapEntry.getValue().getGrowthRateBuy()}"></td>
+            <td th:text="${mapEntry.getValue().getSell()}"></td>
+            <td th:text="${mapEntry.getValue().getDifferenceSell()}"></td>
+            <td th:text="${mapEntry.getValue().getGrowthRateSell()}"></td>
+        </tr>
+    </table>
+</div>
+
 </body>
+<style>
+    .dropdownmenu ul, .dropdownmenu li {
+        margin: 3px;
+        padding: 0;
+    }
+    .dropdownmenu ul {
+        background: gray;
+        list-style: none;
+        width: 100%;
+    }
+    .dropdownmenu li {
+        float: left;
+        position: relative;
+        width:auto;
+    }
+    .dropdownmenu a {
+        background: #b4b4b4;
+        color: #FFFFFF;
+        display: block;
+        font: bold 12px/20px sans-serif;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-transition: all .25s ease;
+        -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+        -o-transition: all .25s ease;
+        transition: all .25s ease;
+
+    }
+    .dropdownmenu li:hover a {
+        background: #383838;
+    }
+
+    body {
+
+        background-image:
+                url(https://roklen24.cz/img/54be16c7e4b0ceea49c64f51/1920/1080?_sig=Tv8kWe9xBr6Xh5iHMKlb7nUFzWHmXcZxeTNhjbsENQg);
+        background-repeat: repeat-x;
+        background-position: 0 100%;
+        background-size: cover;
+    }
+</style>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+    body {
+        font-family: "Roboto", helvetica, arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-rendering: optimizeLegibility;
+    }
+
+    div.table-title {
+        top: 50px;
+        display: block;
+        margin: auto;
+        max-width: 800px;
+        padding: 5px;
+        width: 100%;
+    }
+
+    .table-title h3 {
+        color: #c9c9c9;
+        font-size: 21px;
+        font-weight: 400;
+        font-style:normal;
+        font-family: "Roboto", helvetica, arial, sans-serif;
+        text-shadow: -3px 1px 1px rgba(0, 0, 0, 0.8);
+        text-transform:uppercase;
+    }
+
+
+    .table-fill {
+        background: white;
+        border-radius:1px;
+        border-collapse: collapse;
+        height: 320px;
+        margin: auto;
+        max-width: 600px;
+        padding:1px;
+        width: 100%;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        animation: float 5s infinite;
+    }
+
+    th {
+        color:#D5DDE5;;
+        background: #32353c;
+        border-bottom:1px solid #9ea7af;
+        border-right: 1px solid #343a45;
+        font-size:20px;
+        font-weight: 100;
+        padding:24px;
+        text-align:left;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        vertical-align:middle;
+    }
+
+    th:first-child {
+        border-top-left-radius:3px;
+    }
+
+    th:last-child {
+        border-top-right-radius:3px;
+        border-right:none;
+    }
+
+    tr {
+        border-top: 1px solid #C1C3D1;
+        border-bottom-: 1px solid #C1C3D1;
+        color:#666B85;
+        font-size:10px;
+        font-weight:normal;
+        text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+    }
+
+    tr:hover td {
+        background:#4E5066;
+        color:#FFFFFF;
+        border-top: 1px solid #22262e;
+    }
+
+    tr:first-child {
+        border-top:none;
+    }
+
+    tr:last-child {
+        border-bottom:none;
+    }
+
+    tr:nth-child(odd) td {
+        background:#EBEBEB;
+    }
+
+    tr:nth-child(odd):hover td {
+        background:#4E5066;
+    }
+
+    tr:last-child td:first-child {
+        border-bottom-left-radius:3px;
+    }
+
+    tr:last-child td:last-child {
+        border-bottom-right-radius:3px;
+    }
+
+    td {
+        background:#FFFFFF;
+        padding:5px;
+        text-align:left;
+        vertical-align:middle;
+        font-weight:300;
+        font-size:18px;
+        text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+        border-right: 1px solid #C1C3D1;
+    }
+
+    td:last-child {
+        border-right: 0px;
+    }
+
+    th.text-left {
+        text-align: left;
+    }
+
+    th.text-center {
+        text-align: center;
+    }
+
+    th.text-right {
+        text-align: right;
+    }
+
+    td.text-left {
+        text-align: left;
+    }
+
+    td.text-center {
+        text-align: center;
+    }
+
+    td.text-right {
+        text-align: right;
+    }
+
+</style>
 </html>

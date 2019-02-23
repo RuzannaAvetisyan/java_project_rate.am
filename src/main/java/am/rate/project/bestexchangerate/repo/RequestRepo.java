@@ -1,5 +1,6 @@
 package am.rate.project.bestexchangerate.repo;
 
+import am.rate.project.bestexchangerate.dom.Client;
 import am.rate.project.bestexchangerate.dom.ExchangeOption;
 import am.rate.project.bestexchangerate.dom.Request;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,4 +13,5 @@ import java.util.List;
 public interface RequestRepo extends JpaRepository<Request, Long> {
 
     List<Request> findByActiveTrueAndDeadlineAfterAndExchangeOption(LocalDate deadline, ExchangeOption exchangeOption);
+    List<Request> findByActiveTrueAndDeadlineAfterAndClient(LocalDate deadline, Client client);
 }

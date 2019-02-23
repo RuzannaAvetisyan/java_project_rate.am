@@ -7,8 +7,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories
 public interface CurrencyRepo extends JpaRepository<Currency, String> {
 
-    Currency getByCurrencyType(String s);
-
     Currency findByCurrencyType(String s);
 
     boolean existsByCurrencyType(String s);

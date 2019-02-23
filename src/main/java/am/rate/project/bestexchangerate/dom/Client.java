@@ -6,11 +6,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.util.Collection;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -27,6 +26,9 @@ public class Client implements UserDetails {
     private String password;
 
     private boolean active;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "client", fetch = FetchType.LAZY)
+    private List<Request> requests;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

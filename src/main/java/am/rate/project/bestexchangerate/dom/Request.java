@@ -1,14 +1,17 @@
 package am.rate.project.bestexchangerate.dom;
 
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Data
+
 @NoArgsConstructor
+@Getter
+@Setter
 @Entity
 //@Table(uniqueConstraints = { @UniqueConstraint(columnNames = {"request_type","exchange_options", "fk_currency", "active", "fk_client"}) })
 public class Request {
@@ -26,7 +29,7 @@ public class Request {
     private ExchangeOption exchangeOption = ExchangeOption.CASH;
 
     @ManyToOne()
-    @JoinColumn(name = "fk_currency")
+    @JoinColumn(name = "fk_currency" , referencedColumnName = "currency_type")
     private Currency currency;
 
     @Column(nullable = false)
@@ -39,8 +42,21 @@ public class Request {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate deadline;
 
-    @ManyToOne()
-    @JoinColumn(name = "fk_client")
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "fk_client", referencedColumnName = "username")
     private Client client;
 
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return  " Type: " + requestType.getName() +
+                ", Exchange Option: " + exchangeOption.getName() +
+                ", Currency: " + currency.getCurrencyType() +
+                ", Value: " + value +
+                ", Deadline: " + deadline;
+    }
 }

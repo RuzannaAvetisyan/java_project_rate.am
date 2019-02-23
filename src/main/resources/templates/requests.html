@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Home</title>
+    <title>Requests</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <div class="dropdownmenu">
@@ -20,27 +20,24 @@
 <div class="table-title">
     </br>
     </br>
-    <h3>The table with the average value of the currency, with a difference from yesterday's and with a growth rate for 10 days</h3>
+    <h3>Request table</h3>
 </div>
 <div>
     <table class="table-fill">
         <tr>
-            <th class="text-left">Currency</th>
-            <th class="text-left">Buy</th>
-            <th class="text-left">Difference</th>
-            <th class="text-left">Growth rate</th>
-            <th class="text-left">Sell</th>
-            <th class="text-left">Difference</th>
-            <th class="text-left">Growth rate</th>
+            <th class="text-left">Type:</th>
+            <th class="text-left">Exchange Option:</th>
+            <th class="text-left">Currency:</th>
+            <th class="text-left">Value:</th>
+            <th class="text-left">Deadline:</th>
+            <th class="text-left">Delete</th>
         </tr>
-        <tr th:each="mapEntry : ${table.getCurrencyStatistics()}">
-            <td th:text="${mapEntry.getKey().getCurrencyType()}"></td>
-            <td th:text="${mapEntry.getValue().getBuy()}"></td>
-            <td th:text="${mapEntry.getValue().getDifferenceBuy()}"></td>
-            <td th:text="${mapEntry.getValue().getGrowthRateBuy()}"></td>
-            <td th:text="${mapEntry.getValue().getSell()}"></td>
-            <td th:text="${mapEntry.getValue().getDifferenceSell()}"></td>
-            <td th:text="${mapEntry.getValue().getGrowthRateSell()}"></td>
+        <tr th:each="request : ${requests}">
+            <td th:text="${request.getRequestType().getName()}"></td>
+            <td th:text="${request.getExchangeOption().name}"></td>
+            <td th:text="${request.getCurrency().getCurrencyType()}"></td>
+            <td th:text="${request.getValue()}"></td>
+            <td th:text="${request.getDeadline()}"></td>
         </tr>
     </table>
 </div>
@@ -97,6 +94,7 @@
         font-size: 16px;
         font-weight: 400;
         text-rendering: optimizeLegibility;
+        width: 100%;
     }
 
     div.table-title {
