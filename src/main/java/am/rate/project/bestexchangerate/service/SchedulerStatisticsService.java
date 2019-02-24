@@ -31,14 +31,14 @@ public class SchedulerStatisticsService {
         this.statisticsRepo = statisticsRepo;
     }
 
-    @Scheduled/*(cron = "0 0/2 * * * *")*/(cron = "0 0 1 * * ?")
+    @Scheduled(cron = "0 0 1 * * ?")/*(cron = "0 0/2 * * * *")*/
     private void statisticsCreation(){
+        System.out.println(LocalDate.now());
         Average averageBase = averageRepo.findByDate(LocalDate.now().minusDays(10));
-        System.out.println(LocalDate.now().minusDays(10));
-        Table table = new Table();
         Average averageToday = averageRepo.findByDate(LocalDate.now());
         Average averageYesterday = averageRepo.findByDate(LocalDate.now().minusDays(1));
         Set<Currency> currencies = averageToday.getAverageCurrencyBuy().keySet();
+        Table table = new Table();
         for (Currency currency : currencies) {
             Statistics statistics = new Statistics();
             statistics.setBuy(averageToday.getAverageCurrencyBuy().get(currency));

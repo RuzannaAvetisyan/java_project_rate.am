@@ -27,8 +27,11 @@ public class HomeController {
     @GetMapping("/home")
     public String home(Model model) {
         Table table = tableRepo.findByDate(LocalDate.now());
-        System.out.println(table);
-        model.addAttribute("table",tableRepo.findByDate(LocalDate.now()));
+        if (table != null && table.getCurrencyStatistics() != null && !table.getCurrencyStatistics().isEmpty()){
+            model.addAttribute("table",table);
+        }else {
+            model.addAttribute("message", "No stats are available. Try to come later.");
+        }
         return "home";
     }
 

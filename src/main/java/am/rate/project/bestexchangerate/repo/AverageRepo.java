@@ -13,4 +13,5 @@ public interface AverageRepo extends JpaRepository<Average, LocalDate> {
     Average findByDate(LocalDate date);
 
     List<Average> findByDateAfter(LocalDate date);
+
 }

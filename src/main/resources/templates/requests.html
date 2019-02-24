@@ -1,49 +1,74 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorator="layouts/main" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Requests</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">
+    $( document ).ready(function(){
+        $('#message').fadeIn('slow', function(){
+            $('#message').delay(5000).fadeOut();
+        });
+    });
+</script>
 <div class="dropdownmenu">
     <nav >
         <ul>
             <li><a href="/home">Home</a></li>
-            <li><a href="/request">Make a request</a></li>
             <li><a href="/registration">Registration</a></li>
-            <li><a href="/editProfile">Edit profile</a></li>
-            <li style="float:right" ><a href="/logout">Logout</a></li>
-            <li style="float:right" ><a href="/login">Login</a></li>
+            <li><a href="/editProfile">Edit password</a></li>
+            <li><a href="#">Request</a>
+                <ul id="submenu">
+                    <li><a href="/request">Make a request</a></li>
+                    <li><a href="/requests">Request list</a></li>
+                </ul>
+            </li>
+            <li sec:authorize="isAuthenticated()" style="float:right" ><a href="/logout">Logout</a></li>
+            <li sec:authorize="isAnonymous()" style="float:right" ><a href="/login">Login</a></li>
         </ul>
     </nav>
 </div>
 <body>
-<div class="table-title">
+<div th:if="${message}" style="position: center" class="messages">
     </br>
     </br>
-    <h3>Request table</h3>
+    <h3 class="messages" th:text="${message}">Info message</h3>
+</div>
+<div th:if="${warning}" style="position: center" class="messages">
+    </br>
+    </br>
+    <h3 class="messages" th:text="${warning}">Info message</h3>
+</div>
+<div class="table-title" th:if= "${requests}">
+    </br>
+    </br>
+    <h3>Request list</h3>
 </div>
 <div>
-    <table class="table-fill">
+    <table class="table-fill" th:if= "${requests}">
         <tr>
-            <th class="text-left">Type:</th>
-            <th class="text-left">Exchange Option:</th>
-            <th class="text-left">Currency:</th>
-            <th class="text-left">Value:</th>
-            <th class="text-left">Deadline:</th>
+            <th class="text-left">Currency</th>
+            <th class="text-left">Type</th>
+            <th class="text-left">Exchange Option</th>
+            <th class="text-left">Value</th>
+            <th class="text-left">Deadline</th>
             <th class="text-left">Delete</th>
         </tr>
         <tr th:each="request : ${requests}">
+            <td th:text="${request.getCurrency().getCurrencyType()}"></td>
             <td th:text="${request.getRequestType().getName()}"></td>
             <td th:text="${request.getExchangeOption().name}"></td>
-            <td th:text="${request.getCurrency().getCurrencyType()}"></td>
             <td th:text="${request.getValue()}"></td>
             <td th:text="${request.getDeadline()}"></td>
+            <td><a href="#" th:href="@{/requests/delete/}+${request.getId()}">Delete</a></td>
         </tr>
     </table>
 </div>
-
 </body>
 <style>
+
     .dropdownmenu ul, .dropdownmenu li {
         margin: 3px;
         padding: 0;
@@ -76,37 +101,54 @@
     .dropdownmenu li:hover a {
         background: #383838;
     }
+    #submenu {
+
+        position: absolute;
+        top: 30px;
+        visibility: hidden;
+        z-index: 1;
+    }
+    li:hover ul#submenu {
+        opacity: 1;
+        top: 40px;	/* adjust this as per top nav padding top & bottom comes */
+        visibility: visible;
+    }
+    #submenu li {
+        float: none;
+        width: auto;
+    }
+    #submenu a:hover {
+        background: #3d3d3d;
+    }
+    #submenu a {
+        background-color:#000000;
+    }
+
+</style>
+<style>
+    html {
+        width: 100%;
+        height: 100%;
+    }
 
     body {
-
         background-image:
                 url(https://roklen24.cz/img/54be16c7e4b0ceea49c64f51/1920/1080?_sig=Tv8kWe9xBr6Xh5iHMKlb7nUFzWHmXcZxeTNhjbsENQg);
         background-repeat: repeat-x;
+        background-attachment: fixed;
         background-position: 0 100%;
         background-size: cover;
     }
-</style>
-<style>
-    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-
-    body {
-        font-family: "Roboto", helvetica, arial, sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        text-rendering: optimizeLegibility;
-        width: 100%;
-    }
-
     div.table-title {
-        top: 50px;
+        top: 80%;
+        left: 50%;
         display: block;
         margin: auto;
-        max-width: 800px;
-        padding: 5px;
+        max-width: 600px;
         width: 100%;
     }
 
-    .table-title h3 {
+    h3 {
         color: #c9c9c9;
         font-size: 21px;
         font-weight: 400;
@@ -114,6 +156,7 @@
         font-family: "Roboto", helvetica, arial, sans-serif;
         text-shadow: -3px 1px 1px rgba(0, 0, 0, 0.8);
         text-transform:uppercase;
+
     }
 
 
@@ -210,25 +253,10 @@
         text-align: left;
     }
 
-    th.text-center {
-        text-align: center;
-    }
-
-    th.text-right {
-        text-align: right;
-    }
-
     td.text-left {
         text-align: left;
     }
 
-    td.text-center {
-        text-align: center;
-    }
-
-    td.text-right {
-        text-align: right;
-    }
 
 </style>
 </html>
