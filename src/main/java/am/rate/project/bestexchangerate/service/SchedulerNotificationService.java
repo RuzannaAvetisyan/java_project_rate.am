@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -40,12 +41,10 @@ public class SchedulerNotificationService {
         List<Request> requestNonCash = requestRepo.findByActiveTrueAndDeadlineAfterAndExchangeOption(LocalDate.now().minusDays(1), ExchangeOption.NON_CASH);
         List<Request> requestCard = requestRepo.findByActiveTrueAndDeadlineAfterAndExchangeOption(LocalDate.now().minusDays(1), ExchangeOption.CARD);
         List<Request> requestIgnoreOption = requestRepo.findByActiveTrueAndDeadlineAfterAndExchangeOption(LocalDate.now().minusDays(1), ExchangeOption.IGNORE_OPTION);
-
         List<CurrencyTable> currencyTablesCash = new ArrayList<>();
         List<CurrencyTable> currencyTablesNonCash = new ArrayList<>();
         List<CurrencyTable> currencyTablesCard = new ArrayList<>();
         List<CurrencyTable> currencyTablesIgnoreOption = new ArrayList<>();
-
         if (!requestCash.isEmpty()) {
             String banksCash = "http://www.rate.am/en/armenian-dram-exchange-rates/banks/cash";
             String exchangePointsCash = "http://www.rate.am/en/armenian-dram-exchange-rates/exchange-points/cash/retail";

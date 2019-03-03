@@ -31,7 +31,7 @@ public class SchedulerStatisticsService {
         this.statisticsRepo = statisticsRepo;
     }
 
-    @Scheduled(cron = "0 0 1 * * ?")/*(cron = "0 0/2 * * * *")*/
+    @Scheduled(cron = "0 0 0 * * ?")/*(cron = "0 0/2 * * * *")*/
     private void statisticsCreation(){
         System.out.println(LocalDate.now());
         Average averageBase = averageRepo.findByDate(LocalDate.now().minusDays(10));

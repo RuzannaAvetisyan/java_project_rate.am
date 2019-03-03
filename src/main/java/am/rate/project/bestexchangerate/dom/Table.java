@@ -19,9 +19,6 @@ public class Table {
     @Id
     private LocalDate date = LocalDate.now();
 
-//    @OneToMany(targetEntity = Statistics.class, fetch = FetchType.EAGER, mappedBy = "id", cascade = CascadeType.ALL)
-//    List<Statistics> currencyStatistics = new ArrayList<>();
-
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable()
     @MapKeyColumn(name = "currency")
